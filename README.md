@@ -1,4 +1,4 @@
-# Sensor Data Streaming to Oracle Cloud Infrastructure Streaming - Producer
+# Sensor Data Streaming to OCI - Producer
 
 This Python script demonstrates how to generate fake sensor data and stream it to Oracle Cloud Infrastructure (OCI) Streaming service using a producer-consumer pattern.
 Description
