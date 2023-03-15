@@ -47,5 +47,37 @@ python3 streaming_consumer.py
 The consumer script will continuously read messages from the OCI Stream and print the message offset, key, and value (sensor data) to the screen.
 
 
+# Sensor Data Streaming from OCI - Consume Stream --> Write to ATP
 
+This will read from the OCI Stream and write to a table in Oracle Autonomous Transaction Processing (ATP) Database for doing Time-series analysis
 
+### Create table in ATP
+
+```
+CREATE TABLE sensor_data (
+    sensor_id VARCHAR2(32) NOT NULL,
+    temperature NUMBER(5, 2) NOT NULL,
+    humidity NUMBER(5, 2) NOT NULL,
+    timestamp TIMESTAMP,
+    PRIMARY KEY (sensor_id, timestamp)
+);
+```
+
+To run the script run the below code :
+
+```
+python3 streaming_consumer_atp.py
+```
+ 
+Read the data from ATP
+
+```
+select count(*) from sensor_data;
+```
+
+<img width="625" alt="Screen Shot 2023-03-16 at 1 37 46 am" src="https://user-images.githubusercontent.com/39692236/225343369-aebd2ced-65ee-4cd9-be51-0e45f22fe12d.png">
+
+```
+select * from sensor_data where rownum < = 5;
+```
+<img width="986" alt="Screen Shot 2023-03-16 at 1 38 33 am" src="https://user-images.githubusercontent.com/39692236/225343624-47bb1b59-d34b-430e-9084-b8e183c4da71.png">
