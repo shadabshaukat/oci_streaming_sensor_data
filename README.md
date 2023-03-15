@@ -22,6 +22,8 @@ Usage
 
 To run the script, execute the following command:
 
+```
 python3 streaming.py
+```
 
 The script will continuously generate sensor data and publish it to the OCI Stream.
