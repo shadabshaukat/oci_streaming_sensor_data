@@ -1,4 +1,4 @@
-# Sensor Data Streaming to Oracle Cloud Infrastructure Streaming
+# Sensor Data Streaming to Oracle Cloud Infrastructure Streaming - Producer
 
 This Python script demonstrates how to generate fake sensor data and stream it to Oracle Cloud Infrastructure (OCI) Streaming service using a producer-consumer pattern.
 Description
@@ -23,10 +23,29 @@ Usage
 To run the script, execute the following command:
 
 ```
-python3 streaming.py
+python3 streaming_producer.py
 ```
+
+<img width="1238" alt="Screen Shot 2023-03-15 at 9 02 03 pm" src="https://user-images.githubusercontent.com/39692236/225275632-5be49399-63af-4df0-be9e-96a74bb8792d.png">
 
 The script will continuously generate sensor data and publish it to the OCI Stream.
 
+# Sensor Data Streaming from OCI - Consumer
 
-<img width="1238" alt="Screen Shot 2023-03-15 at 9 02 03 pm" src="https://user-images.githubusercontent.com/39692236/225275632-5be49399-63af-4df0-be9e-96a74bb8792d.png">
+This script continuously reads sensor data messages from the Oracle Cloud Infrastructure (OCI) Streaming service and is the consumer part of the producer-consumer pattern.
+
+Consumer script reads messages from the OCI Stream using a group cursor and processes them in a continuous loop. It outputs the message offset, key, and value (sensor data) to the screen. The script sleeps for 1 second if there are no messages to process.
+
+To run the script, execute the following command:
+
+```
+python3 streaming_consumer.py
+```
+
+<img width="1045" alt="Screen Shot 2023-03-16 at 12 24 03 am" src="https://user-images.githubusercontent.com/39692236/225321942-49804a28-cdc6-49ab-8e00-d681145068fe.png">
+
+The consumer script will continuously read messages from the OCI Stream and print the message offset, key, and value (sensor data) to the screen.
+
+
+
+
