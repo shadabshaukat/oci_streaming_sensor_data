@@ -30,7 +30,7 @@ python3 streaming_producer.py
 
 The script will continuously generate sensor data and publish it to the OCI Stream.
 
-# Sensor Data Streaming from OCI - Consumer
+# Sensor Data Streaming from OCI - Consumer --> Print to Screen
 
 This script continuously reads sensor data messages from the Oracle Cloud Infrastructure (OCI) Streaming service and is the consumer part of the producer-consumer pattern.
 
@@ -47,7 +47,7 @@ python3 streaming_consumer.py
 The consumer script will continuously read messages from the OCI Stream and print the message offset, key, and value (sensor data) to the screen.
 
 
-# Sensor Data Streaming from OCI - Consume Stream --> Write to ATP
+# Sensor Data Streaming from OCI - Consume --> Write to ATP
 
 This will read from the OCI Stream and write to a table in Oracle Autonomous Transaction Processing (ATP) Database for doing Time-series analysis
 
