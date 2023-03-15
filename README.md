@@ -27,3 +27,6 @@ python3 streaming.py
 ```
 
 The script will continuously generate sensor data and publish it to the OCI Stream.
+
+
+<img width="1238" alt="Screen Shot 2023-03-15 at 9 02 03 pm" src="https://user-images.githubusercontent.com/39692236/225275632-5be49399-63af-4df0-be9e-96a74bb8792d.png">
