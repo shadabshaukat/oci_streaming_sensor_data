@@ -11,8 +11,8 @@ ociProfileName = "DEFAULT"
 
 # Oracle Database connection details
 db_username = "admin"
-db_password = "RAbbithole1234#_"
-db_dsn = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-melbourne-1.oraclecloud.com))(connect_data=(service_name=g9b8049aad9c64c_y16fuv7vqq9428l5_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"  # Connection string or TNS name for the Oracle Database
+db_password = "*******"
+db_dsn = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.ap-melbourne-1.oraclecloud.com))(connect_data=(service_name=*****_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"  # Connection string or TNS name for the Oracle Database
 
 def get_cursor_by_group(sc, sid, group_name, instance_name):
     cursor_details = oci.streaming.models.CreateGroupCursorDetails(group_name=group_name, instance_name=instance_name, type="LATEST")
